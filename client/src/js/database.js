@@ -45,7 +45,8 @@ export const getDb = async () => {
     const request = store.getAll();
     const result = await request;
     console.log('result.value', result);
-    return result.value;
+    
+    return result?.value; // returns the value property of the result, using the optional chaining (?.) operator. It returns undefined if result is null or undefined, avoiding potential errors
     
   } catch (err) {
     
