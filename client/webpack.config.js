@@ -11,8 +11,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js',
-      editor: './src/js/editor.js'
+      install: './src/js/install.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -36,9 +35,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Jate',
+        name: 'Just Another Text Editor',
         short_name: 'Jate',
-        description: 'Just Another Text Editor',
+        description: 'Text editor that allows modern Javascript has offline functionality',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
